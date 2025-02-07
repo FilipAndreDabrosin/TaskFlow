@@ -1,65 +1,54 @@
 <?php
-
 namespace App\Http\Controllers;
 
-use App\Models\Note;
 use Illuminate\Http\Request;
+use App\Models\Note;
+use Illuminate\Support\Facades\Auth;
 
 class NoteController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        //
+        $notes = Note::where('user_id', Auth::id())->latest()->get();
+        return view('notes.index', compact('notes'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
-        //
+        $request->validate(['content' => 'required|string']);
+
+        Note::create([
+            'user_id' => Auth::id(),
+            'content' => $request->content,
+        ]);
+
+        return redirect()->route('notes.index')->with('success', 'Note created successfully.');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Note $note)
-    {
-        //
-    }
+    public function update(Request $request, $id)
+{
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Note $note)
-    {
-        //
-    }
+    $request->validate([
+        'content' => 'required|string'
+    ]);
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Note $note)
-    {
-        //
-    }
+    
+    $note = Note::where('id', $id)->where('user_id', Auth::id())->firstOrFail();
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Note $note)
+    
+    $note->update([
+        'content' => $request->content
+    ]);
+
+    
+    return redirect()->route('notes.index')->with('success', 'Note updated successfully.');
+}
+
+    public function destroy($id)
     {
-        //
+        $note = Note::where('id', $id)->where('user_id', Auth::id())->firstOrFail();
+        $note->delete();
+
+        return redirect()->route('notes.index')->with('success', 'Note deleted successfully.');
     }
 }
