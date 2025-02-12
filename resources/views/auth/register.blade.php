@@ -2,9 +2,9 @@
 
     
 
-    <form method="POST" action="/register" class="bg-gray-100 rounded-md p-3">
+    <form method="POST" action="/register" class="bg-gray-100 dark:bg-gray-700  rounded-md p-3">
         @csrf
-        <h1 class="mb-2 text-gray-900 font-[Poppins-regular]">Register</h1>
+        <h1 class="mb-2 text-gray-900 dark:text-white font-[Poppins-regular]">Register</h1>
 
         <div class="space-y-12">
             <div class="border-b border-gray-900/10 pb-12">
@@ -52,7 +52,7 @@
             </div>
         </div>
         <div class="mt-6 flex items-center justify-end gap-x-6">
-            <button type="button" class="text-sm font-semibold leading-6 text-gray-900">Cancel</button>
+            <button type="button" class="text-sm font-semibold leading-6 text-gray-900 dark:text-white">Cancel</button>
             <x-form-button>Register</x-form-button>
         </div>
     </form>

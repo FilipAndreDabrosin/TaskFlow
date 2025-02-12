@@ -3,7 +3,9 @@
 use App\Http\Controllers\NoteController;
 use App\Http\Controllers\RegisteredUserController;
 use App\Http\Controllers\SessionController;
+
 use Illuminate\Support\Facades\Route;
+
 
 
 
@@ -19,6 +21,10 @@ Route::get('/about', function () {
 
 Route::get('/contact', function () {
     return view('contact');
+});
+
+Route::get('/calculator', function () {
+    return view('calculator');
 });
 
 Route::get('/register', [RegisteredUserController::class, 'create'])->name('register');

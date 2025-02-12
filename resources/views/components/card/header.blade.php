@@ -1,0 +1,1 @@
+<h1 class="text-white 2xl:text-3xl items-center font-bold text-xl flex col-span-1  " >{{ $slot }}</h1>

@@ -1,0 +1,1 @@
+<img src=" {{ asset('images/notes-logo-v1-black.png')}}" class="2xl:row-span-2 2xl:col-span-1 2xl:size-64 xl:size-48 size-32 row-span-1 col-span-1 flex items-center" alt="">
