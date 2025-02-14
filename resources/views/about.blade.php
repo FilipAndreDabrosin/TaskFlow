@@ -1,5 +1,5 @@
 <x-layout>
-  <div class="dark:bg-slate-800 dark:text-gray-100 bg-indigo-100 text-center  rounded p-1.5">
+  <div class="dark:bg-slate-800 dark:text-gray-100 bg-indigo-100 text-center text-black rounded p-1.5">
     <h1 class="2xl:text-2xl text-lg">
         About Page
     </h1>

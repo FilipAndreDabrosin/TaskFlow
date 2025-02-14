@@ -64,7 +64,7 @@
                 @endguest
 
                 @auth
-                    <h2 class="2xl:text-xl dark:text-white">Hi, {{ auth()->user()->first_name }}</h2>
+                    <h2 class="2xl:text-xl dark:text-white text-black">Hi, {{ auth()->user()->first_name }}</h2>
                     <form method="POST" action="/logout">
                         @csrf
                         <button
@@ -86,7 +86,7 @@
         </div>
     </main>
 
-    <footer class="dark:bg-slate-800  dark:text-gray-100 bg-gray-100 ">
+    <footer class="dark:bg-slate-800  dark:text-gray-100 bg-gray-100 text-black ">
         <div class="container mx-auto py-14 px-6">
             <div class="grid md:grid-cols-12 grid-cols-1 gap-7">
                 <div class="lg:col-span-4 col-span-12">
@@ -106,7 +106,7 @@
                         eveniet adipisci dicta tenetur inventore, asperiores expedita.</p>
                 </div>
                 <div class="lg:col-span-2 md:col-span-4 col-span-12">
-                    <h5 class="tracking-wide dark:text-gray-100 font-semibold">TaskFlow</h5>
+                    <h5 class="tracking-wide dark:text-gray-100 text-black font-semibold">TaskFlow</h5>
                     <ul class="list-none mt-6 space-y-2">
                         <li>
                             <a href="{{ url('about') }}"
@@ -119,7 +119,7 @@
                     </ul>
                 </div>
                 <div class="lg:col-span-2 md:col-span-4 col-span-12">
-                    <h5 class="tracking-wide dark:text-gray-100 font-semibold">Services</h5>
+                    <h5 class="tracking-wide dark:text-gray-100 text-black font-semibold">Services</h5>
                     <ul class="list-none mt-6 space-y-2">
                         <li>
                             <a href="{{ url('notes') }}"
@@ -134,7 +134,7 @@
                 <div class="lg:col-span-3 md-col-span-4 col-span-12"></div>
             </div>
         </div>
-        <div class="border-t dark:border-slate-700">
+        <div class="border-t dark:border-slate-700 bg-gray-100">
             <div class="md:text-left text-center container mx-auto py-7 px-6">
                 <p class="mb-0"> 
                     &copy 

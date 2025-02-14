@@ -11,7 +11,7 @@
             <form action="{{ route('notes.store') }}" method="POST">
                 @csrf
                 <textarea name="content"
-                    class="input-box relative w-full font-[Poppins-regular] max-w-lg min-h-36 bg-gray-100 dark:bg-gray-800 dark:text-white p-5 my-5 outline-none rounded-md"
+                    class="input-box relative w-full font-[Poppins-regular] max-w-lg min-h-36 bg-gray-100 dark:bg-gray-600 dark:text-white p-5 my-5 outline-none rounded-md"
                     required></textarea>
                 <x-form-button class="">Save Changes</x-form-button>
             </form>
@@ -23,14 +23,14 @@
 
         <!-- Form for editing existing notes -->
         @foreach ($notes as $note)
-            <div class="bg-white dark:bg-gray-900 shadow-md rounded-lg p-4 my-2 mr-2">
+            <div class="bg-white dark:bg-gray-600 shadow-md rounded-lg p-4 my-2 mr-2">
                 <p id="noteText{{ $note->id }}" class="text-gray-700 dark:text-white">{{ $note->content }}</p>
 
                 <form id="editForm{{ $note->id }}" action="{{ route('notes.update', $note->id) }}" method="POST"
                     class="hidden">
                     @csrf
                     @method('PATCH')
-                    <textarea name="content" class="w-full p-2 border border-gray-300 rounded-lg mb-2 dark:bg-gray-800 dark:text-white" rows="3" required>{{ $note->content }}</textarea>
+                    <textarea name="content" class="w-full p-2 border border-gray-300 rounded-lg mb-2 dark:bg-gray-600 dark:text-white" rows="3" required>{{ $note->content }}</textarea>
                     <x-form-button>Save Changes</x-form-button>
                     <button type="button" class="bg-gray-400 hover:bg-gray-500 text-white px-4 py-2 rounded cancelEdit"
                         data-id="{{ $note->id }}">
