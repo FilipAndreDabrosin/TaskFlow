@@ -1,6 +1,6 @@
 <x-layout>
-    <div class="w-full dark:bg-gradient-to-b  dark:from-[#6a0dad] dark:to-[#1e40af] bg-gradient-to-r from-violet-400 to-purple-300 pt-[4%] pl-[10%] pb-3 rounded-2xl">
-        <h1 class="flex items-center text-white font-bold text-2xl">
+    <div class="w-full dark:bg-slate-800 bg-indigo-300 pt-[4%] pl-[10%] pb-3 rounded-2xl">
+        <h1 class="flex items-center dark:text-white font-bold text-2xl">
             <ion-icon class="w-16" name="clipboard-outline"></ion-icon> Notes
         </h1>
         
