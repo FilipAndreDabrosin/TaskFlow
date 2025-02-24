@@ -134,7 +134,7 @@
                 <div class="lg:col-span-3 md-col-span-4 col-span-12"></div>
             </div>
         </div>
-        <div class="border-t dark:border-slate-700 bg-gray-100">
+        <div class="border-t dark:border-slate-700 bg-gray-100 dark:bg-slate-800">
             <div class="md:text-left text-center container mx-auto py-7 px-6">
                 <p class="mb-0"> 
                     &copy 
